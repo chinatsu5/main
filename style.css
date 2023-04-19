@@ -1,0 +1,291 @@
+body, html
+{   
+    background-color: black;
+    background-position: center;
+    background-size: 30%;
+    background-image: url("https://cdn.glitch.global/36a067da-ef1a-445b-86e7-0128d3be2176/asdasd.png?v=1671900304593");
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+}
+
+img
+{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.sablon{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.box
+{   
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    
+    color: white;
+    font-weight: bold;
+    
+    border-radius: 50px;
+    border: 3px solid;
+    filter: drop-shadow(0px 0px 10px black);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.box2
+{   
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    
+    color: white;
+    font-weight: bold;
+    
+    border-radius: 50px;
+    border: 3px solid;
+    filter: drop-shadow(0px 0px 10px black);
+    position: absolute;
+    top: 1%;
+    margin: 13%;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu
+{
+    text-align:center;
+    font-size: 60px;
+    font-weight: bold;
+    float: left;
+    margin: 10px 0 50px 0;
+    background:rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    z-index: 3;
+    width: 100%;
+    height: 10%;
+    
+}
+
+.parent {
+  text-align:center;
+  margin:0px;
+  width:110%;
+  padding:0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+ }
+    
+.child{
+  padding:0 10%;
+  text-align:center;
+  list-style-type:none;
+  width:inherit;
+  margin:5px;
+}
+
+.menu a:hover
+{
+    font-size: medium;
+    text-shadow: 0 0 15px white, 0 0 20px white;
+}
+
+.menu ul 
+{
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0px; 
+    padding: 0px; 
+    list-style: none;
+}
+
+.menu a
+{
+    font-size: 120px;
+    font-weight: bold;
+    transition: 0.3s; 
+    display: block; 
+    width: inherit;
+    text-align:center;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    font: 13px tahoma;
+    color: white;
+    padding: 15px 0 0 0;
+} 
+
+.menu li {
+    font-size: 60px;
+    font-weight: bold;
+    text-align:center;
+    float: left; 
+}
+
+.logo
+{
+    text-align: center;
+    border-radius: 100%;
+    background-image: url("https://cdn.glitch.global/36a067da-ef1a-445b-86e7-0128d3be2176/logo_unblur.png?v=1671900380079");
+    background-size: 115%;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    margin: 80px auto 0;
+}
+
+.games
+{
+    transition: 0.3s; 
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 200px;
+    margin: 30px 0 0 15px;
+  
+   
+}
+
+.test
+{
+  width: auto;
+}
+
+.games:hover
+{
+    filter: drop-shadow(0px 0px 10px #757575);
+}
+
+.icons ul
+{
+    
+    list-style: none;
+}
+
+.icons li
+{
+    filter: blur(0.5px);
+    filter: drop-shadow(0px 0px 0px white);
+    transition: 0.3s;
+    margin: 30px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    width: 80px;
+    height: 70px;
+}
+
+.icons li:hover
+{
+    filter: drop-shadow(0px 0px 5px white);
+    width: 80px;
+    height: 80px;
+}
+
+.fullscreen
+{
+  border-radius: 10px;
+  transition: 0.3s;
+  background-image: url("https://cdn.glitch.global/36a067da-ef1a-445b-86e7-0128d3be2176/fscreen.png?v=1673633631127");
+  background-size: 100% 100%;
+  float: right;
+  right:50px;
+  bottom:180px;
+  position:absolute;
+  background-color: #404040;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.3;
+  display:block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.fullscreen:hover {opacity: 0.7}
+
+@keyframes my-animation {
+  from {
+    background-color: rgba(0,0,0,0.0);
+  }
+  to {
+    background-color: rgba(0,0,0,0.75);
+  }
+}
+
+#myModal{
+  display: none;
+}
+
+.modal {
+          /* animation ayarları */
+    animation-name: my-animation;
+    animation-duration: 0.5s;
+  
+    display: none; /* Varsayılan olarak gizlidir */
+    position: fixed; /* Yerinde kal */
+    z-index: 1; /* Üstte */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ful Genişlik */
+    height: 100%; /* Ful Yükseklik */
+    overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+    background-color: rgb(0,0,0); /* Yedek renk */
+    background-color: rgba(0,0,0,0.75); /* Siyah w / opaklık */
+    transition: 0.3s;
+}
+
+/* İçerik / Kutu */
+.modal-content {
+    filter: drop-shadow(0px 0px 10px #363636);
+    text-align: center;
+    border-radius: 30px;
+    background-color: #212121;
+    margin: 2% auto; /* % 15 üstten ve ortalanmış */
+    padding: 20px;
+    width: 80%; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
+}
+iframe{
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 80vh;
+  src: "https://v6p9d9t4.ssl.hwcdn.net/html/7068848/index.html";
+}
+/* Kapat Düğmesi */
+.close {
+    transition: 0.3s;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    transition: 0.3s;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}

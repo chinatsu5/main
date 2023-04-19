@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/0bc31896-8e15-494b-b59a-2cb661122cec/bok.png?v=1671916578780"
+    />
+    <title>Chinatsu</title>
+
+    
+    <script>
+      
+      function goFullscreen(id) {
+        var element = document.getElementById(id);
+        if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+          element.webkitRequestFullScreen();
+        }
+      }
+
+      window.onload = function () {
+        var imgs = [
+          "https://img.itch.zone/aW1nLzk5NTUzNTgucG5n/315x250%23c/9bUc8L.png",
+          "https://img.itch.zone/aW1nLzk3Nzg0NjgucG5n/315x250%23c/lgY8Oh.png",
+          "https://img.itch.zone/aW1nLzk0MDMyMzUucG5n/315x250%23c/JKJ0rY.png",
+          "https://img.itch.zone/aW1nLzkxNDU2MjMucG5n/315x250%23c/c1DiOr.png",
+          "https://img.itch.zone/aW1nLzEwODgzNTQ4LmpwZw==/315x250%23c/OAjFho.jpg",
+          "https://img.itch.zone/aW1nLzExNzIyNTQ2LnBuZw==/315x250%23c/SegZE%2F.png"
+        ];
+
+        var games = [
+          "https://v6p9d9t4.ssl.hwcdn.net/html/6440853/index.html",
+          "https://v6p9d9t4.ssl.hwcdn.net/html/6331969/index.html",
+          "https://v6p9d9t4.ssl.hwcdn.net/html/6116806/index.html",
+          "https://v6p9d9t4.ssl.hwcdn.net/html/5943414/index.html",
+          "https://v6p9d9t4.ssl.hwcdn.net/html/7068848/index.html",
+          "https://itch.io/embed-upload/7608547?color=1b1b1b"
+        ];
+
+        // Popup Al
+        var modal = document.getElementById("myModal");
+
+        // Kipi açan düğmeyi al
+        var btn = document.getElementById("myBtn");
+
+        // Kipi kapatan <span> öğesini edinin
+        var span = document.getElementsByClassName("close")[0];
+
+        // loop through the images
+        for (i = 0; i < imgs.length; i++) {
+          // and create a new image on the page for each one
+          var a = document.getElementById("placeholder");
+          a.innerHTML +=
+            "<a target='iframee' href = " +
+            games[i] +
+            "><img src='" +
+            imgs[i] +
+            "' class='games'></img>" +
+            "</a>";
+          a.onclick = function () {
+            modal.style.display = "block";
+          };
+        };
+
+        span.onclick = function () {
+          modal.style.display = "none";
+          const element = document.getElementById("game");
+          element.src = "https://";
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <!-- POP-UP -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="parent">
+        <iframe
+          src="https://"
+          id="game"
+          name="iframee"
+        ></iframe>
+        <div class="fullscreen" onclick="goFullscreen('game'); return false"></div>
+        </div>
+        <br><br>
+
+        <a id="itchbt" href="https://chinatsuyoshi.itch.io/"
+          ><img
+            src="https://cdn.glitch.global/36a067da-ef1a-445b-86e7-0128d3be2176/badge.png?v=1673545066558"
+            style="width: 20%"
+        /></a>
+      </div>
+    </div>
+
+    <!-- NOT POP-UP -->
+    <div class="sablon">
+      <div class="box2">
+        <div class="menu">
+          <ul>
+            <div class="parent">
+              <div class="child">
+                <li><a href="index.html">Home</a></li>
+              </div>
+              <div class="child">
+                <li><a href="games.html">Games</a></li>
+              </div>
+              <div class="child">
+                <li><a href="social.html">Links</a></li>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <h1 style="font-size: 50px">Games</h1>
+
+        <div id="placeholder" class="test"></div>
+      </div>
+    </div>
+  </body>
+</html>
